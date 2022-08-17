@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ArrayQueue.cs" />
+    <Compile Include="Model\DuplexItem.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\LinkedDeque.cs" />
+    <Compile Include="Model\LinkedQueue.cs" />
+    <Compile Include="Model\SimpleDeque.cs" />
     <Compile Include="Model\SimpleQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

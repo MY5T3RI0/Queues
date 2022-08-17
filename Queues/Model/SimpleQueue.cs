@@ -9,7 +9,7 @@ namespace Queues.Model
     class SimpleQueue<T>
     {
         private List<T> Items = new List<T>();
-        private T Tail => Items.First();
+        private T Head => Items.Last();
         private int Count => Items.Count();
 
         public SimpleQueue()
@@ -22,9 +22,9 @@ namespace Queues.Model
             Items.Add(data);
         }
 
-        public void Enqueque(T data)
+        public void Enqueue(T data)
         {
-            Items.Add(data);
+            Items.Insert(0, data);
         }
 
         public T Dequeue()
@@ -33,7 +33,7 @@ namespace Queues.Model
             {
                 throw new NullReferenceException("Очередь пуста");
             }
-            var item = Tail;
+            var item = Head;
             Items.Remove(item);
             return item;
         }
@@ -44,7 +44,7 @@ namespace Queues.Model
             {
                 throw new NullReferenceException("Очередь пуста");
             }
-            return Tail;
+            return Head;
         }
     }
 }
